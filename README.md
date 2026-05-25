@@ -28,7 +28,7 @@ Explore specific subdomains tailored to different tech stacks:
 This portfolio is built with love and:
 
 - ⚛️ **React** (Frontend)
-- ☁️ **AWS S3 & CloudFront** (Hosting and CDN)
+- ▲ **Vercel** or ☁️ **AWS S3 & CloudFront** (Hosting and CDN)
 - 🖌️ **Tailwind CSS** (Styling)
 - 🛡️ **DatoCMS** (Content Management)
 - 🧩 **Other Cool Tools**: GitHub Actions
@@ -63,7 +63,7 @@ npm cache clean --force
 npm install
 ```
 
-3. **Configure Environment Variables**: Create a `.env` file and set up the necessary API keys and configurations.
+3. **Configure Environment Variables**: Copy `.env.example` to `.env` and add your DatoCMS API tokens.
 4. **Run the Project**: Start the development server.
 
 ```bash
@@ -72,6 +72,54 @@ npm start
 
 5. **Visit the Local Server**: Open your browser and navigate to the local server URL.
    ![alt text](image.png)
+
+---
+
+## ▲ Deploy to Vercel
+
+This app is a [Create React App](https://create-react-app.dev/) project. Vercel detects it automatically when you import the GitHub repo.
+
+### 1. Import the repository
+
+1. Go to [vercel.com/new](https://vercel.com/new) and sign in with GitHub.
+2. Import this repository.
+3. Leave the defaults (or confirm):
+   - **Framework Preset:** Create React App
+   - **Build Command:** `npm run build` or `yarn build`
+   - **Output Directory:** `build`
+   - **Install Command:** `npm install` or `yarn install`
+
+Node version is read from `.nvmrc` (currently `20.12.2`).
+
+### 2. Environment variables
+
+In the Vercel project → **Settings** → **Environment Variables**, add the DatoCMS tokens (same names as local `.env`):
+
+| Name | Purpose |
+|------|---------|
+| `REACT_APP_DATOCMS_ROR_TOKEN` | Main / Rails profile (also used on `*.vercel.app`) |
+| `REACT_APP_DATOCMS_JAVA_TOKEN` | Java subdomain |
+| `REACT_APP_DATOCMS_FRONTEND_TOKEN` | Frontend subdomain |
+| `REACT_APP_DATOCMS_NODE_TOKEN` | Node subdomain |
+
+Copy `.env.example` as a checklist. Redeploy after adding or changing variables.
+
+### 3. Client-side routing
+
+`vercel.json` rewrites all routes to `index.html` so React Router paths (e.g. `/browse`, `/skills`) work on refresh and direct links.
+
+### 4. Custom domains (optional)
+
+To mirror the original multi-subdomain setup, add each domain in Vercel → **Domains** (e.g. `java.yourdomain.com`) and point DNS to Vercel. Token selection is based on hostname in `src/queries/getDatoCmsToken.ts`.
+
+### Build failures (CI / ESLint)
+
+Vercel sets `CI=true`, so ESLint warnings fail the build. Fix unused imports and variables locally, then push:
+
+```bash
+# Windows PowerShell
+$env:CI="true"; npm run build
+```
 
 ---
 

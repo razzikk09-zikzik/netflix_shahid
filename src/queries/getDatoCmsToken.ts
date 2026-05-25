@@ -23,6 +23,10 @@ export const getDatoCmsToken = (): string => {
       return process.env.REACT_APP_DATOCMS_NODE_TOKEN ?? '';
 
     default:
+      // Vercel preview/production (*.vercel.app) and other deploy hosts
+      if (hostname.endsWith('.vercel.app')) {
+        return process.env.REACT_APP_DATOCMS_ROR_TOKEN ?? '';
+      }
       throw new Error(`No DatoCMS token configured for hostname: ${hostname}`);
   }
 };
