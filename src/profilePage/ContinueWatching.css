@@ -52,10 +52,17 @@
 .continue-watching-row__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    transparent 70%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  pointer-events: none;
 }
 
 .continue-watching-row__label {
@@ -66,9 +73,25 @@
 }
 
 @media (max-width: 768px) {
+  .continue-watching-row {
+    padding: 8px 12px 24px;
+  }
+
+  .continue-watching-row__title {
+    font-size: 1.15rem;
+  }
+
+  .continue-watching-row__scroll {
+    gap: 10px;
+  }
+
   .continue-watching-row__tile,
   .continue-watching-row__img {
-    width: 200px;
-    height: 160px;
+    width: 165px;
+    height: 130px;
+  }
+
+  .continue-watching-row__label {
+    font-size: 0.95rem;
   }
 }

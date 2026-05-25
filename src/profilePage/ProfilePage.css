@@ -19,7 +19,13 @@ h1 {
 
 @media (max-width: 768px) {
   .profile-page {
-    height: 100vh;
-    padding-bottom: 5rem;
+    height: auto;
+    min-height: 55vh;
+    padding: 72px 16px 24px;
+    align-items: flex-end;
+  }
+
+  .profile-page-sections {
+    padding-bottom: 16px;
   }
 }

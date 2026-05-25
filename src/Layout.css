@@ -1,0 +1,11 @@
+.layout-page .content {
+  padding-top: 88px;
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+@media (max-width: 768px) {
+  .layout-page .content {
+    padding-top: 72px;
+  }
+}

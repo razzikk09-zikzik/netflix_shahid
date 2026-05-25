@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import './NetflixTitle.css';
 import netflixSound from './netflix-sound.mp3';
 import { useNavigate } from 'react-router-dom';
@@ -7,48 +7,78 @@ import logoImage from './images/updatedlogo.png';
 const SPLASH_DURATION_MS = 4000;
 
 const NetflixTitle: React.FC = () => {
-  const [isAnimating, setIsAnimating] = useState(true);
+  const isAnimating = true;
   const navigate = useNavigate();
-  const hasStarted = useRef(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const hasPlayedSound = useRef(false);
+  const navigateTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const startSplash = () => {
-    if (hasStarted.current) return;
-    hasStarted.current = true;
-    setIsAnimating(true);
+  const playSound = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio || hasPlayedSound.current) return;
 
-    const audio = new Audio(netflixSound);
     audio.volume = 0.9;
-    audio.play().catch(() => {
-      // Browsers may block autoplay until interaction; animation still runs
-    });
-  };
-
-  useEffect(() => {
-    startSplash();
+    const playPromise = audio.play();
+    if (playPromise) {
+      playPromise
+        .then(() => {
+          hasPlayedSound.current = true;
+        })
+        .catch(() => {
+          /* retry on next user gesture */
+        });
+    }
   }, []);
 
   useEffect(() => {
-    if (!isAnimating) return;
+    const audio = audioRef.current;
+    if (audio) {
+      audio.load();
+    }
 
-    const timer = setTimeout(() => {
+    playSound();
+
+    const unlockAudio = () => {
+      playSound();
+    };
+
+    document.addEventListener('pointerdown', unlockAudio, { once: true });
+    document.addEventListener('keydown', unlockAudio, { once: true });
+
+    navigateTimer.current = setTimeout(() => {
       navigate('/browse');
     }, SPLASH_DURATION_MS);
 
-    return () => clearTimeout(timer);
-  }, [isAnimating, navigate]);
+    return () => {
+      document.removeEventListener('pointerdown', unlockAudio);
+      document.removeEventListener('keydown', unlockAudio);
+      if (navigateTimer.current) clearTimeout(navigateTimer.current);
+    };
+  }, [navigate, playSound]);
 
-  const handleSkip = () => {
+  const handleInteraction = () => {
+    playSound();
+    if (navigateTimer.current) clearTimeout(navigateTimer.current);
     navigate('/browse');
   };
 
   return (
-    <div className="netflix-container" onClick={handleSkip} role="presentation">
+    <div
+      className="netflix-container"
+      onPointerDown={playSound}
+      onClick={handleInteraction}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && handleInteraction()}
+      aria-label="Enter portfolio"
+    >
+      <audio ref={audioRef} src={netflixSound} preload="auto" />
       <img
         src={logoImage}
         alt="S. Mohamed Shahid"
         className={`netflix-logo ${isAnimating ? 'animate' : ''}`}
       />
-      <p className="netflix-skip-hint">Click to skip</p>
+      <p className="netflix-skip-hint">Tap anywhere to enter with sound</p>
     </div>
   );
 };

@@ -61,29 +61,38 @@
 
 .top-picks-row__overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.45) 35%,
+    transparent 65%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  opacity: 1;
+  pointer-events: none;
+  transition: background 0.3s ease;
 }
 
 .top-picks-row__tile:hover .top-picks-row__overlay {
-  opacity: 1;
+  background: linear-gradient(
+    to top,
+    rgba(229, 9, 20, 0.75) 0%,
+    rgba(0, 0, 0, 0.5) 40%,
+    transparent 70%
+  );
 }
 
 .top-picks-row__label {
   color: #fff;
   font-size: 1.15rem;
   font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 1);
   text-align: center;
-  padding: 0 8px;
+  padding: 0 12px;
+  line-height: 1.3;
 }
 
 @keyframes topPicksSlideIn {
@@ -99,12 +108,27 @@
 
 @media (max-width: 768px) {
   .top-picks-row {
-    padding: 10px 16px 16px;
+    padding: 8px 12px 12px;
+    margin: 12px 0 20px;
+  }
+
+  .top-picks-row__title {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+
+  .top-picks-row__scroll {
+    gap: 10px;
+    padding-bottom: 8px;
   }
 
   .top-picks-row__tile,
   .top-picks-row__img {
-    width: 200px;
-    height: 160px;
+    width: 165px;
+    height: 130px;
+  }
+
+  .top-picks-row__label {
+    font-size: 0.95rem;
   }
 }
