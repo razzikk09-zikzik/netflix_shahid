@@ -1,7 +1,7 @@
 export const availabilityData = {
   headline: 'Career Availability',
   summary:
-    'Based in Guduvanchery, Tamil Nadu. Final-year B.Tech (ECE) student open to full-time and internship opportunities across India (remote-friendly roles welcome).',
+    'Based in Guduvanchery, Tamil Nadu. Final-year B.Tech (ECE) student open to full-time and internship opportunities across India.',
   roles: [
     'Software Engineer',
     'Full-Stack Developer',

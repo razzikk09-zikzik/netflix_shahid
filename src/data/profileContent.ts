@@ -47,7 +47,7 @@ export const profileBannerContent: Record<ProfileType, ProfileBannerContent> = {
     profileSummary:
       'Final-year B.Tech (ECE) graduate with hands-on experience in full-stack web development, embedded systems, IoT, and machine learning.',
     footerLine: 'Building intelligent systems with software + hardware integration.',
-    resumeLink: RESUME_LINK,
+    resumeLink: 'https://drive.google.com/file/d/1o1emjCUQ5AOyb1X6WQRN6tkS6P03C8g8/view?usp=sharing',
     linkedinLink: LINKEDIN_LINK,
   },
 };

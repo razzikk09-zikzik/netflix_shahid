@@ -1,7 +1,4 @@
-AWS Cloud Computing & Cloud Security Workshop
-Amazon Web Services & Deloitte certificate link - https://drive.google.com/file/d/1UQoWOrRuBoNok2UiMIslywPXhmmucdxP/view?usp=sharing 
-iit bombay spoken tutorial certificate - https://drive.google.com/file/d/1pMZGU_e1bzMfhO5mPlQHbxGLHU8V-AJ4/view?usp=sharing 
-nptel ceritifcate - https://drive.google.com/file/d/1ESl3q6gE7gtn-92E9tu-X4L8bQqXw8di/view?usp=sharing 
-add ceritifcate links 
+inside career availablity remove remotte friendly roles bracket, and certificates should also be in three lines when clicked and instead of link directly use images in folder for certficates whichever suits,  and in adventurer resume button use this link for resume https://drive.google.com/file/d/1o1emjCUQ5AOyb1X6WQRN6tkS6P03C8g8/view?usp=sharing 
 
-and finally psuh changes to github without any errors
+and push changes to github - https://github.com/razzikk09-zikzik/netflix_shahid
+

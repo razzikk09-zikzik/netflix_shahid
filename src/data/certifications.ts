@@ -1,46 +1,52 @@
 import { Certification } from '../types';
+import img1 from '../images/licence.jpg';
+import img2 from '../images/msme.png';
+import img3 from '../images/licence2.png';
+import img4 from '../images/internship.jpg';
+import img5 from '../images/internship1.jpg';
+import img6 from '../images/startups.png';
 
 export const certificationsData: Certification[] = [
   {
     title: 'AWS Cloud Computing & Cloud Security Workshop',
     issuer: 'Amazon Web Services & Deloitte',
     issuedDate: '2024',
-    link: 'https://drive.google.com/file/d/1UQoWOrRuBoNok2UiMIslywPXhmmucdxP/view?usp=sharing',
+    link: img1,
     iconName: 'aws',
   },
   {
     title: 'Diploma in Artificial Intelligence (AI Major)',
     issuer: 'Professional Certification',
     issuedDate: '',
-    link: '#',
+    link: img2,
     iconName: 'university',
   },
   {
     title: 'Cybersecurity Fundamentals',
     issuer: 'Deloitte',
     issuedDate: '',
-    link: '#',
+    link: img3,
     iconName: 'coursera',
   },
   {
     title: 'NPTEL–SWAYAM Engineering Courses',
     issuer: 'NPTEL / SWAYAM',
     issuedDate: '',
-    link: 'https://drive.google.com/file/d/1ESl3q6gE7gtn-92E9tu-X4L8bQqXw8di/view?usp=sharing',
+    link: img4,
     iconName: 'university',
   },
   {
     title: 'IIT Bombay Spoken Tutorial Certifications',
     issuer: 'IIT Bombay',
     issuedDate: '',
-    link: 'https://drive.google.com/file/d/1pMZGU_e1bzMfhO5mPlQHbxGLHU8V-AJ4/view?usp=sharing',
+    link: img5,
     iconName: 'university',
   },
   {
     title: 'ChatGPT Prompt Engineering (Basic)',
     issuer: 'Online Certification',
     issuedDate: '',
-    link: '#',
+    link: img6,
     iconName: 'coursera',
   },
 ];
