@@ -15,7 +15,7 @@ const Browse: React.FC = () => {
     { name: 'recruiter', image: blueImage, backgroundGif: profileBackgroundGifs.recruiter },
     { name: 'developer', image: greyImage, backgroundGif: profileBackgroundGifs.developer },
     { name: 'stalker', image: redImage, backgroundGif: profileBackgroundGifs.stalker },
-    { name: 'adventurer', image: yellowImage, backgroundGif: profileBackgroundGifs.adventure },
+    { name: 'adventurer', image: yellowImage, backgroundGif: profileBackgroundGifs.adventurer },
   ];
 
   const handleProfileClick = (profile: { name: string; image: string; backgroundGif: string }) => {

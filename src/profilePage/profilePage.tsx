@@ -7,13 +7,13 @@ import TopPicksRow from './TopPicksRow';
 import ContinueWatching from './ContinueWatching';
 import { profileBackgroundGifs } from '../data/profileBackgrounds';
 
-type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventure';
+type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventurer';
 
 const ProfilePage: React.FC = () => {
   const location = useLocation();
   const { profileName } = useParams<{ profileName: string }>();
 
-  const profile = ['recruiter', 'developer', 'stalker', 'adventure'].includes(profileName!)
+  const profile = ['recruiter', 'developer', 'stalker', 'adventurer'].includes(profileName!)
     ? (profileName as ProfileType)
     : 'recruiter';
 

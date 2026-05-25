@@ -1,4 +1,4 @@
-export type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventure';
+export type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventurer';
 
 const RESUME_LINK =
   'https://drive.google.com/file/d/1_nxX5ui3DmKEyZ3ywYwMWdQmq24ezWNS/view?usp=sharing';
@@ -41,7 +41,7 @@ export const profileBannerContent: Record<ProfileType, ProfileBannerContent> = {
     resumeLink: RESUME_LINK,
     linkedinLink: LINKEDIN_LINK,
   },
-  adventure: {
+  adventurer: {
     headline: 'S. Mohamed Shahid – Software Engineer & Full-Stack Developer',
     tagline: 'Full-Stack Developer | IoT Innovator | ML Enthusiast',
     profileSummary:
