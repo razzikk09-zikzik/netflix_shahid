@@ -1,8 +1,5 @@
-in certificates remove aws
-For nptel certificate use image - nptelshahid.jpeg 
-for iit bombay spoke tutorial use image - arduino.jpeg
-deloitte cyber job fundamentals use this image - deloitte.jpeg
-remove chat gpt cvertificate 
-Completed a certified course on Basics & Fundamentals of Cloud Computing from Udemy, covering core cloud concepts, services, and cloud computing fundamentals. for this use image - udemy.jpeg
-Successfully completed MATLAB Onramp training from MathWorks Training Services, gaining foundational knowledge in MATLAB programming and computational problem-solving. for this us image - matlab.jpeg
-apart from this any other certification in certificate section remove and replace with these whatever i hv given only in certificate section and push changes to github 
+in projects add a new project digital communication circuit simulation using multisim 
+This project is a **Digital Communication circuit simulation** created in **Multisim** using an operational amplifier (AD741CN). It demonstrates basic signal processing, amplification, and waveform analysis using an oscilloscope, helping understand fundamental communication system concepts.
+use image digital.jpeg for it 
+
+and push changes to github

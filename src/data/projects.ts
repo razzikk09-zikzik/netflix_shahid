@@ -2,6 +2,7 @@ import { Project } from '../types';
 import chickenImg from '../images/chicken.jpg';
 import carromImg from '../images/carrom.jpg';
 import chinnarasuImg from '../images/chinnarasu.png';
+import digitalImg from '../images/digital.jpeg';
 
 export const projectsData: Project[] = [
   {
@@ -38,5 +39,12 @@ export const projectsData: Project[] = [
       'Simulated 5G NR waveforms (OFDM, beamforming) in MATLAB Simulink. Benchmarked BER and throughput across SNR ranges; documented LTE vs 5G KPI comparison.',
     techUsed: 'MATLAB, Simulink, Signal Processing',
     image: { url: 'https://picsum.photos/seed/5g-analysis/600/400' },
+  },
+  {
+    title: 'Digital Communication circuit simulation using multisim',
+    description:
+      'This project is a **Digital Communication circuit simulation** created in **Multisim** using an operational amplifier (AD741CN). It demonstrates basic signal processing, amplification, and waveform analysis using an oscilloscope, helping understand fundamental communication system concepts.',
+    techUsed: 'Multisim',
+    image: { url: digitalImg },
   },
 ];
