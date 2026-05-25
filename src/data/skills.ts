@@ -59,4 +59,21 @@ export const technicalSkills: SkillCategory[] = [
       { name: 'AWS', description: 'Cloud fundamentals', iconKey: 'FaAws' },
     ],
   },
+  {
+    category: 'BUSINESS DEVELOPMENT & PROFESSIONAL SKILLS',
+    skills: [
+      { name: 'Customer Relationship Management (CRM)', description: 'CRM strategy and tools', iconKey: 'FaUsers' },
+      { name: 'Customer Support', description: 'Assisting and guiding clients', iconKey: 'FaHeadset' },
+      { name: 'Client Relationship Management', description: 'Maintaining client relationships', iconKey: 'FaHandshake' },
+      { name: 'Business Development Support', description: 'Driving business growth', iconKey: 'FaChartLine' },
+      { name: 'Technical Consulting Support', description: 'Technical advisory services', iconKey: 'FaTools' },
+      { name: 'Communication & Negotiation Skills', description: 'Effective dialogue and deal making', iconKey: 'FaComments' },
+      { name: 'Sales Coordination', description: 'Aligning sales efforts', iconKey: 'FaShoppingCart' },
+      { name: 'Team Collaboration', description: 'Working effectively in teams', iconKey: 'FaUsersCog' },
+      { name: 'Public Speaking', description: 'Presenting to audiences', iconKey: 'FaMicrophone' },
+      { name: 'Technical Documentation', description: 'Writing clear documentation', iconKey: 'FaFileAlt' },
+      { name: 'Presentation Skills', description: 'Delivering engaging presentations', iconKey: 'FaDesktop' },
+      { name: 'Problemskills', description: 'Analytical issue resolution', iconKey: 'FaBrain' },
+    ],
+  },
 ];

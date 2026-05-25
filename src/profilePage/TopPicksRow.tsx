@@ -3,6 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import './TopPicksRow.css';
 import internshipThumb from '../images/internship.jpg';
 import licenceThumb from '../images/licence.jpg';
+import availabilityThumb from '../images/crm.png';
+import skillsThumb from '../images/digital.jpeg';
+import experienceThumb from '../images/deloitte.jpeg';
+import certsThumb from '../images/udemy.jpeg';
+import recommendationsThumb from '../images/chinnarasu.png';
+import projectsThumb from '../images/letsxchange.png';
+import contactThumb from '../images/logo.png';
+import musicThumb from '../images/gta.jpg';
+import readingThumb from '../images/atomic_habits.jpg';
 
 type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventurer';
 
@@ -18,37 +27,37 @@ interface TopPicksRowProps {
 
 const topPicksConfig: Record<ProfileType, TopPick[]> = {
   recruiter: [
-    { title: 'Availability', imgSrc: 'https://picsum.photos/seed/availability/250/200', route: '/work-permit' },
-    { title: 'Skills', imgSrc: 'https://picsum.photos/seed/skills/250/200', route: '/skills' },
-    { title: 'Experience', imgSrc: 'https://picsum.photos/seed/workexperience/250/200', route: '/work-experience' },
+    { title: 'Availability', imgSrc: availabilityThumb, route: '/work-permit' },
+    { title: 'Skills', imgSrc: skillsThumb, route: '/skills' },
+    { title: 'Experience', imgSrc: experienceThumb, route: '/work-experience' },
     { title: 'Internship', imgSrc: internshipThumb, route: '/internship' },
     { title: 'Licence', imgSrc: licenceThumb, route: '/licence' },
-    { title: 'Certifications', imgSrc: 'https://picsum.photos/seed/certifications/250/200', route: '/certifications' },
-    { title: 'Recommendations', imgSrc: 'https://picsum.photos/seed/recommendations/250/200', route: '/recommendations' },
-    { title: 'Projects', imgSrc: 'https://picsum.photos/seed/projects/250/200', route: '/projects' },
-    { title: 'Contact Me', imgSrc: 'https://picsum.photos/seed/contact/250/200', route: '/contact-me' },
+    { title: 'Certifications', imgSrc: certsThumb, route: '/certifications' },
+    { title: 'Recommendations', imgSrc: recommendationsThumb, route: '/recommendations' },
+    { title: 'Projects', imgSrc: projectsThumb, route: '/projects' },
+    { title: 'Contact Me', imgSrc: contactThumb, route: '/contact-me' },
   ],
   developer: [
-    { title: 'Skills', imgSrc: 'https://picsum.photos/seed/coding/250/200', route: '/skills' },
-    { title: 'Projects', imgSrc: 'https://picsum.photos/seed/development/250/200', route: '/projects' },
-    { title: 'Certifications', imgSrc: 'https://picsum.photos/seed/badge/250/200', route: '/certifications' },
-    { title: 'Experience', imgSrc: 'https://picsum.photos/seed/work/250/200', route: '/work-experience' },
-    { title: 'Recommendations', imgSrc: 'https://picsum.photos/seed/networking/250/200', route: '/recommendations' },
-    { title: 'Contact Me', imgSrc: 'https://picsum.photos/seed/connect/250/200', route: '/contact-me' },
+    { title: 'Skills', imgSrc: skillsThumb, route: '/skills' },
+    { title: 'Projects', imgSrc: projectsThumb, route: '/projects' },
+    { title: 'Certifications', imgSrc: certsThumb, route: '/certifications' },
+    { title: 'Experience', imgSrc: experienceThumb, route: '/work-experience' },
+    { title: 'Recommendations', imgSrc: recommendationsThumb, route: '/recommendations' },
+    { title: 'Contact Me', imgSrc: contactThumb, route: '/contact-me' },
   ],
   stalker: [
-    { title: 'Recommendations', imgSrc: 'https://picsum.photos/seed/networking/250/200', route: '/recommendations' },
-    { title: 'Contact Me', imgSrc: 'https://picsum.photos/seed/call/250/200', route: '/contact-me' },
-    { title: 'Projects', imgSrc: 'https://picsum.photos/seed/planning/250/200', route: '/projects' },
-    { title: 'Experience', imgSrc: 'https://picsum.photos/seed/resume/250/200', route: '/work-experience' },
-    { title: 'Certifications', imgSrc: 'https://picsum.photos/seed/achievements/250/200', route: '/certifications' },
+    { title: 'Recommendations', imgSrc: recommendationsThumb, route: '/recommendations' },
+    { title: 'Contact Me', imgSrc: contactThumb, route: '/contact-me' },
+    { title: 'Projects', imgSrc: projectsThumb, route: '/projects' },
+    { title: 'Experience', imgSrc: experienceThumb, route: '/work-experience' },
+    { title: 'Certifications', imgSrc: certsThumb, route: '/certifications' },
   ],
   adventurer: [
-    { title: 'Music', imgSrc: 'https://picsum.photos/seed/music/250/200', route: '/music' },
-    { title: 'Projects', imgSrc: 'https://picsum.photos/seed/innovation/250/200', route: '/projects' },
-    { title: 'Reading', imgSrc: 'https://picsum.photos/seed/books/250/200', route: '/reading' },
-    { title: 'Contact Me', imgSrc: 'https://picsum.photos/seed/connect/250/200', route: '/contact-me' },
-    { title: 'Certifications', imgSrc: 'https://picsum.photos/seed/medal/250/200', route: '/certifications' },
+    { title: 'Music', imgSrc: musicThumb, route: '/music' },
+    { title: 'Projects', imgSrc: projectsThumb, route: '/projects' },
+    { title: 'Reading', imgSrc: readingThumb, route: '/reading' },
+    { title: 'Contact Me', imgSrc: contactThumb, route: '/contact-me' },
+    { title: 'Certifications', imgSrc: certsThumb, route: '/certifications' },
   ],
 };
 
