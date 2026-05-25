@@ -1,52 +1,44 @@
 import { Certification } from '../types';
-import img1 from '../images/licence.jpg';
-import img2 from '../images/msme.png';
-import img3 from '../images/licence2.png';
-import img4 from '../images/internship.jpg';
-import img5 from '../images/internship1.jpg';
-import img6 from '../images/startups.png';
+import nptelImg from '../images/nptelshahid.jpeg';
+import arduinoImg from '../images/arduino.jpeg';
+import deloitteImg from '../images/deloitte.jpeg';
+import udemyImg from '../images/udemy.jpeg';
+import matlabImg from '../images/matlab.jpeg';
 
 export const certificationsData: Certification[] = [
-  {
-    title: 'AWS Cloud Computing & Cloud Security Workshop',
-    issuer: 'Amazon Web Services & Deloitte',
-    issuedDate: '2024',
-    link: img1,
-    iconName: 'aws',
-  },
-  {
-    title: 'Diploma in Artificial Intelligence (AI Major)',
-    issuer: 'Professional Certification',
-    issuedDate: '',
-    link: img2,
-    iconName: 'university',
-  },
-  {
-    title: 'Cybersecurity Fundamentals',
-    issuer: 'Deloitte',
-    issuedDate: '',
-    link: img3,
-    iconName: 'coursera',
-  },
   {
     title: 'NPTEL–SWAYAM Engineering Courses',
     issuer: 'NPTEL / SWAYAM',
     issuedDate: '',
-    link: img4,
+    link: nptelImg,
     iconName: 'university',
   },
   {
     title: 'IIT Bombay Spoken Tutorial Certifications',
     issuer: 'IIT Bombay',
     issuedDate: '',
-    link: img5,
+    link: arduinoImg,
     iconName: 'university',
   },
   {
-    title: 'ChatGPT Prompt Engineering (Basic)',
-    issuer: 'Online Certification',
+    title: 'Cybersecurity Fundamentals',
+    issuer: 'Deloitte',
     issuedDate: '',
-    link: img6,
+    link: deloitteImg,
     iconName: 'coursera',
+  },
+  {
+    title: 'Basics & Fundamentals of Cloud Computing',
+    issuer: 'Udemy',
+    issuedDate: '',
+    link: udemyImg,
+    iconName: 'coursera',
+  },
+  {
+    title: 'MATLAB Onramp training',
+    issuer: 'MathWorks Training Services',
+    issuedDate: '',
+    link: matlabImg,
+    iconName: 'university',
   },
 ];

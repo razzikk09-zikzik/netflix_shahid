@@ -1,4 +1,8 @@
-inside career availablity remove remotte friendly roles bracket, and certificates should also be in three lines when clicked and instead of link directly use images in folder for certficates whichever suits,  and in adventurer resume button use this link for resume https://drive.google.com/file/d/1o1emjCUQ5AOyb1X6WQRN6tkS6P03C8g8/view?usp=sharing 
-
-and push changes to github - https://github.com/razzikk09-zikzik/netflix_shahid
-
+in certificates remove aws
+For nptel certificate use image - nptelshahid.jpeg 
+for iit bombay spoke tutorial use image - arduino.jpeg
+deloitte cyber job fundamentals use this image - deloitte.jpeg
+remove chat gpt cvertificate 
+Completed a certified course on Basics & Fundamentals of Cloud Computing from Udemy, covering core cloud concepts, services, and cloud computing fundamentals. for this use image - udemy.jpeg
+Successfully completed MATLAB Onramp training from MathWorks Training Services, gaining foundational knowledge in MATLAB programming and computational problem-solving. for this us image - matlab.jpeg
+apart from this any other certification in certificate section remove and replace with these whatever i hv given only in certificate section and push changes to github 
