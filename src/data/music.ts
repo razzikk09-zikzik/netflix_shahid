@@ -24,7 +24,7 @@ export const gtaPlaylist: Track[] = [
     artist: 'Young Maylay',
     album: 'GTA SA Official Soundtrack',
     duration: '4:32',
-    youtubeId: 'QZHmNo46z6k',
+    youtubeId: '6VewzN781wQ',
   },
   {
     id: 'gta-loading',
@@ -32,7 +32,7 @@ export const gtaPlaylist: Track[] = [
     artist: 'Oh No — "Welcome to Los Santos"',
     album: 'GTA V Score',
     duration: '3:22',
-    youtubeId: '6vYkNhs2LP0',
+    youtubeId: 'eBxF1ghnZE0',
   },
 ];
 
