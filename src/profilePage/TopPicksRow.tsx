@@ -1,16 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TopPicksRow.css';
-import blueImage from '../images/blue.png';
-import greyImage from '../images/grey.png';
-import redImage from '../images/red.png';
 import internshipThumb from '../images/internship.jpg';
 import licenceThumb from '../images/licence.jpg';
-import chickenImg from '../images/chicken.jpg';
-import chinnarasuImg from '../images/chinnarasu.png';
-import msmeImg from '../images/msme.png';
-import gtaImg from '../images/gta.jpg';
-import shapicImg from '../images/shapic.png';
 
 type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventure';
 
@@ -26,37 +18,37 @@ interface TopPicksRowProps {
 
 const topPicksConfig: Record<ProfileType, TopPick[]> = {
   recruiter: [
-    { title: 'Availability', imgSrc: blueImage, route: '/work-permit' },
-    { title: 'Skills', imgSrc: greyImage, route: '/skills' },
-    { title: 'Experience', imgSrc: redImage, route: '/work-experience' },
+    { title: 'Availability', imgSrc: 'https://picsum.photos/seed/availability/250/200', route: '/work-permit' },
+    { title: 'Skills', imgSrc: 'https://picsum.photos/seed/skills/250/200', route: '/skills' },
+    { title: 'Experience', imgSrc: 'https://picsum.photos/seed/workexperience/250/200', route: '/work-experience' },
     { title: 'Internship', imgSrc: internshipThumb, route: '/internship' },
     { title: 'Licence', imgSrc: licenceThumb, route: '/licence' },
-    { title: 'Certifications', imgSrc: msmeImg, route: '/certifications' },
-    { title: 'Recommendations', imgSrc: shapicImg, route: '/recommendations' },
-    { title: 'Projects', imgSrc: chickenImg, route: '/projects' },
-    { title: 'Contact Me', imgSrc: blueImage, route: '/contact-me' },
+    { title: 'Certifications', imgSrc: 'https://picsum.photos/seed/certifications/250/200', route: '/certifications' },
+    { title: 'Recommendations', imgSrc: 'https://picsum.photos/seed/recommendations/250/200', route: '/recommendations' },
+    { title: 'Projects', imgSrc: 'https://picsum.photos/seed/projects/250/200', route: '/projects' },
+    { title: 'Contact Me', imgSrc: 'https://picsum.photos/seed/contact/250/200', route: '/contact-me' },
   ],
   developer: [
-    { title: 'Skills', imgSrc: greyImage, route: '/skills' },
-    { title: 'Projects', imgSrc: chinnarasuImg, route: '/projects' },
-    { title: 'Certifications', imgSrc: msmeImg, route: '/certifications' },
-    { title: 'Experience', imgSrc: redImage, route: '/work-experience' },
-    { title: 'Internship', imgSrc: internshipThumb, route: '/internship' },
-    { title: 'Contact Me', imgSrc: shapicImg, route: '/contact-me' },
+    { title: 'Skills', imgSrc: 'https://picsum.photos/seed/coding/250/200', route: '/skills' },
+    { title: 'Projects', imgSrc: 'https://picsum.photos/seed/development/250/200', route: '/projects' },
+    { title: 'Certifications', imgSrc: 'https://picsum.photos/seed/badge/250/200', route: '/certifications' },
+    { title: 'Experience', imgSrc: 'https://picsum.photos/seed/work/250/200', route: '/work-experience' },
+    { title: 'Recommendations', imgSrc: 'https://picsum.photos/seed/networking/250/200', route: '/recommendations' },
+    { title: 'Contact Me', imgSrc: 'https://picsum.photos/seed/connect/250/200', route: '/contact-me' },
   ],
   stalker: [
-    { title: 'Recommendations', imgSrc: shapicImg, route: '/recommendations' },
-    { title: 'Contact Me', imgSrc: blueImage, route: '/contact-me' },
-    { title: 'Projects', imgSrc: chinnarasuImg, route: '/projects' },
-    { title: 'Experience', imgSrc: greyImage, route: '/work-experience' },
-    { title: 'Certifications', imgSrc: msmeImg, route: '/certifications' },
+    { title: 'Recommendations', imgSrc: 'https://picsum.photos/seed/networking/250/200', route: '/recommendations' },
+    { title: 'Contact Me', imgSrc: 'https://picsum.photos/seed/call/250/200', route: '/contact-me' },
+    { title: 'Projects', imgSrc: 'https://picsum.photos/seed/planning/250/200', route: '/projects' },
+    { title: 'Experience', imgSrc: 'https://picsum.photos/seed/resume/250/200', route: '/work-experience' },
+    { title: 'Certifications', imgSrc: 'https://picsum.photos/seed/achievements/250/200', route: '/certifications' },
   ],
   adventure: [
-    { title: 'Music', imgSrc: gtaImg, route: '/music' },
-    { title: 'Projects', imgSrc: chickenImg, route: '/projects' },
-    { title: 'Internship', imgSrc: internshipThumb, route: '/internship' },
-    { title: 'Contact Me', imgSrc: blueImage, route: '/contact-me' },
-    { title: 'Licence', imgSrc: licenceThumb, route: '/licence' },
+    { title: 'Music', imgSrc: 'https://picsum.photos/seed/music/250/200', route: '/music' },
+    { title: 'Projects', imgSrc: 'https://picsum.photos/seed/innovation/250/200', route: '/projects' },
+    { title: 'Reading', imgSrc: 'https://picsum.photos/seed/books/250/200', route: '/reading' },
+    { title: 'Contact Me', imgSrc: 'https://picsum.photos/seed/connect/250/200', route: '/contact-me' },
+    { title: 'Certifications', imgSrc: 'https://picsum.photos/seed/medal/250/200', route: '/certifications' },
   ],
 };
 
@@ -78,7 +70,14 @@ const TopPicksRow: React.FC<TopPicksRowProps> = ({ profile }) => {
             tabIndex={0}
             onKeyDown={(e) => e.key === 'Enter' && navigate(pick.route)}
           >
-            <img src={pick.imgSrc} alt={pick.title} className="top-picks-row__img" loading="lazy" />
+            <img
+              src={pick.imgSrc}
+              alt={pick.title}
+              className="top-picks-row__img"
+              width={250}
+              height={200}
+              loading="lazy"
+            />
             <div className="top-picks-row__overlay">
               <span className="top-picks-row__label">{pick.title}</span>
             </div>
