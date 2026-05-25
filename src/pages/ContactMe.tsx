@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactMe.css';
-import profilePic from '../images/blue.png';
+import profilePic from '../images/shapic.png';
 import { FaEnvelope, FaPhoneAlt, FaCoffee, FaLinkedin } from 'react-icons/fa';
 import { contactMeData } from '../data/contactMe';
 
@@ -12,7 +12,9 @@ const ContactMe: React.FC = () => {
   return (
     <div className="contact-container">
       <div className="linkedin-badge-custom">
-        <img src={profilePic} alt="S. Mohamed Shahid" className="badge-avatar" />
+        <div className="badge-avatar-wrap">
+          <img src={profilePic} alt="S. Mohamed Shahid" className="badge-avatar" />
+        </div>
         <div className="badge-content">
           <h3 className="badge-name">{userData.name}</h3>
           <p className="badge-title">{userData.title}</p>
