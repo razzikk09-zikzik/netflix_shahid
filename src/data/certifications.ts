@@ -5,7 +5,7 @@ export const certificationsData: Certification[] = [
     title: 'AWS Cloud Computing & Cloud Security Workshop',
     issuer: 'Amazon Web Services & Deloitte',
     issuedDate: '2024',
-    link: '#',
+    link: 'https://drive.google.com/file/d/1UQoWOrRuBoNok2UiMIslywPXhmmucdxP/view?usp=sharing',
     iconName: 'aws',
   },
   {
@@ -26,14 +26,14 @@ export const certificationsData: Certification[] = [
     title: 'NPTEL–SWAYAM Engineering Courses',
     issuer: 'NPTEL / SWAYAM',
     issuedDate: '',
-    link: 'https://swayam.gov.in/',
+    link: 'https://drive.google.com/file/d/1ESl3q6gE7gtn-92E9tu-X4L8bQqXw8di/view?usp=sharing',
     iconName: 'university',
   },
   {
     title: 'IIT Bombay Spoken Tutorial Certifications',
     issuer: 'IIT Bombay',
     issuedDate: '',
-    link: 'https://spoken-tutorial.org/',
+    link: 'https://drive.google.com/file/d/1pMZGU_e1bzMfhO5mPlQHbxGLHU8V-AJ4/view?usp=sharing',
     iconName: 'university',
   },
   {

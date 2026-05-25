@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa'; // Import icons
+import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope, FaIdCard, FaCertificate } from 'react-icons/fa';
 import './Navbar.css';
 import siteLogo from '../images/updatedlogo.png';
 import blueImage from '../images/blue.png';
@@ -41,6 +41,8 @@ const Navbar: React.FC = () => {
             <li><Link to="/work-experience">Professional</Link></li>
             <li><Link to="/skills">Skills</Link></li>
             <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/internship">Internship</Link></li>
+            <li><Link to="/licence">Licence</Link></li>
             <li><Link to="/contact-me">Hire Me</Link></li>
           </ul>
         </div>
@@ -68,6 +70,8 @@ const Navbar: React.FC = () => {
           <li><Link to="/work-experience" onClick={closeSidebar}><FaBriefcase /> Professional</Link></li>
           <li><Link to="/skills" onClick={closeSidebar}><FaTools /> Skills</Link></li>
           <li><Link to="/projects" onClick={closeSidebar}><FaProjectDiagram /> Projects</Link></li>
+          <li><Link to="/internship" onClick={closeSidebar}><FaIdCard /> Internship</Link></li>
+          <li><Link to="/licence" onClick={closeSidebar}><FaCertificate /> Licence</Link></li>
           <li><Link to="/contact-me" onClick={closeSidebar}><FaEnvelope /> Hire Me</Link></li>
         </ul>
       </div>

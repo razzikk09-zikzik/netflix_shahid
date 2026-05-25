@@ -14,6 +14,8 @@ import Music from './pages/Music';
 import Reading from './pages/Reading';
 import Blogs from './pages/Blogs';
 import Certifications from './pages/Certifications';
+import Internship from './pages/Internship';
+import Licence from './pages/Licence';
 
 const App: React.FC = () => {
   return (
@@ -31,6 +33,8 @@ const App: React.FC = () => {
       <Route path="/reading" element={<Layout><Reading /></Layout>} />
       <Route path="/blogs" element={<Layout><Blogs /></Layout>} />
       <Route path="/certifications" element={<Layout><Certifications /></Layout>} />
+      <Route path="/internship" element={<Layout><Internship /></Layout>} />
+      <Route path="/licence" element={<Layout><Licence /></Layout>} />
     </Routes>
   );
 };

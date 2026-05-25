@@ -1,0 +1,135 @@
+.licence-container {
+  padding: 110px 24px 60px;
+  background: linear-gradient(180deg, #141414 0%, #1a1010 100%);
+  color: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.licence-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.licence-eyebrow {
+  color: #e50914;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.licence-hero h1 {
+  font-size: 2.6rem;
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.licence-tagline {
+  font-size: 1.15rem;
+  color: #e5e5e5;
+  margin-bottom: 16px;
+}
+
+.licence-summary {
+  color: #b3b3b3;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+.licence-grant-badge {
+  display: inline-block;
+  background: rgba(229, 9, 20, 0.15);
+  border: 1px solid #e50914;
+  color: #ffd4d4;
+  padding: 12px 18px;
+  border-radius: 8px;
+  max-width: 720px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.licence-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-bottom: 44px;
+}
+
+.licence-highlight-card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid #e50914;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  animation: licenceFadeIn 0.6s ease forwards;
+}
+
+.licence-highlight-card h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.licence-highlight-card p {
+  margin: 0;
+  color: #b3b3b3;
+  line-height: 1.5;
+  font-size: 0.92rem;
+}
+
+.licence-gallery-section h2 {
+  text-align: center;
+  color: #e50914;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+}
+
+.licence-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.licence-frame {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(229, 9, 20, 0.2);
+  opacity: 0;
+  animation: licenceFadeIn 0.6s ease forwards;
+}
+
+.licence-frame img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.licence-frame:hover img {
+  transform: scale(1.04);
+}
+
+.licence-frame figcaption {
+  padding: 12px 14px;
+  font-size: 0.88rem;
+  color: #d6d6d6;
+  text-align: center;
+}
+
+@keyframes licenceFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .licence-hero h1 {
+    font-size: 2rem;
+  }
+}

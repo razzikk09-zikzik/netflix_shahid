@@ -1,10 +1,28 @@
 .netflix-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: #141414;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.netflix-skip-hint {
+  position: absolute;
+  bottom: 32px;
+  color: #737373;
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 0.8s 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .netflix-logo {
