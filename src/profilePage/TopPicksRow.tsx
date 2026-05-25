@@ -3,14 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import './TopPicksRow.css';
 import internshipThumb from '../images/internship.jpg';
 import licenceThumb from '../images/licence.jpg';
-import availabilityThumb from '../images/crm.png';
-import skillsThumb from '../images/digital.jpeg';
-import experienceThumb from '../images/deloitte.jpeg';
+import availabilityThumb from '../images/availablity.jpg';
+import skillsThumb from '../images/skills.png';
+import experienceThumb from '../images/experience.jpg';
 import certsThumb from '../images/udemy.jpeg';
 import recommendationsThumb from '../images/chinnarasu.png';
-import projectsThumb from '../images/letsxchange.png';
-import contactThumb from '../images/logo.png';
-import musicThumb from '../images/gta.jpg';
+import projectsThumb from '../images/project.jpg';
+import contactThumb from '../images/cntct.webp';
 import readingThumb from '../images/atomic_habits.jpg';
 
 type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventurer';
@@ -53,7 +52,7 @@ const topPicksConfig: Record<ProfileType, TopPick[]> = {
     { title: 'Certifications', imgSrc: certsThumb, route: '/certifications' },
   ],
   adventurer: [
-    { title: 'Music', imgSrc: musicThumb, route: '/music' },
+    { title: 'Music', imgSrc: 'https://picsum.photos/seed/music/250/200', route: '/music' },
     { title: 'Projects', imgSrc: projectsThumb, route: '/projects' },
     { title: 'Reading', imgSrc: readingThumb, route: '/reading' },
     { title: 'Contact Me', imgSrc: contactThumb, route: '/contact-me' },

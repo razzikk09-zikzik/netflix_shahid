@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ContinueWatching.css';
-import musicThumb from '../images/gta.jpg';
 import readingThumb from '../images/atomic_habits.jpg';
 import blogsThumb from '../images/rich_dad_poor_dad.jpg';
-import contactThumb from '../images/logo.png';
+import contactThumb from '../images/cntct.webp';
 import certsThumb from '../images/udemy.jpeg';
 
 type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventurer';
@@ -18,11 +17,11 @@ const continueWatchingConfig: Record<
   { title: string; imgSrc: string; link: string }[]
 > = {
   recruiter: [
-    { title: 'Music', imgSrc: musicThumb, link: '/music' },
+    { title: 'Music', imgSrc: 'https://picsum.photos/id/1025/250/200', link: '/music' },
     { title: 'Contact Me', imgSrc: contactThumb, link: '/contact-me' },
   ],
   developer: [
-    { title: 'Music', imgSrc: musicThumb, link: '/music' },
+    { title: 'Music', imgSrc: 'https://picsum.photos/id/1025/250/200', link: '/music' },
     { title: 'Reading', imgSrc: readingThumb, link: '/reading' },
     { title: 'Blogs', imgSrc: blogsThumb, link: '/blogs' },
     { title: 'Certifications', imgSrc: certsThumb, link: '/certifications' },
@@ -34,7 +33,7 @@ const continueWatchingConfig: Record<
     { title: 'Contact Me', imgSrc: contactThumb, link: '/contact-me' },
   ],
   adventurer: [
-    { title: 'Music', imgSrc: musicThumb, link: '/music' },
+    { title: 'Music', imgSrc: 'https://picsum.photos/id/1025/250/200', link: '/music' },
     { title: 'Reading', imgSrc: readingThumb, link: '/reading' },
     { title: 'Certifications', imgSrc: certsThumb, link: '/certifications' },
     { title: 'Contact Me', imgSrc: contactThumb, link: '/contact-me' },
