@@ -1,13 +1,18 @@
 import licenceMain from '../images/licence.jpg';
 import licenceAlt from '../images/licence2.png';
-import internshipDoc from '../images/internship.jpg';
-import internshipDocAlt from '../images/internship1.jpg';
+import shapicPhoto from '../images/shapic.png';
 import msmeCert from '../images/msme.png';
 import chickenProduct from '../images/chicken.jpg';
 
 export interface LicenceHighlight {
   title: string;
   description: string;
+}
+
+export interface LicenceImage {
+  src: string;
+  caption: string;
+  isProfilePhoto?: boolean;
 }
 
 export const shasChickenLicence = {
@@ -35,8 +40,7 @@ export const shasChickenLicence = {
     { src: licenceMain, caption: 'Business licence & registration' },
     { src: licenceAlt, caption: 'Startup compliance documentation' },
     { src: msmeCert, caption: 'MSME registration certificate' },
-    { src: internshipDoc, caption: 'Project & venture documentation' },
-    { src: internshipDocAlt, caption: 'Implementation & field validation records' },
+    { src: shapicPhoto, caption: '', isProfilePhoto: true },
     { src: chickenProduct, caption: 'Shas Chicken — smart freshness system' },
-  ],
+  ] as LicenceImage[],
 };

@@ -111,8 +111,25 @@
   transition: transform 0.35s ease;
 }
 
+.licence-frame-profile {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.licence-frame-profile img {
+  height: 280px;
+  object-fit: contain;
+  object-position: center top;
+  background: #0d0d0d;
+  padding: 12px;
+}
+
 .licence-frame:hover img {
   transform: scale(1.04);
+}
+
+.licence-frame-profile:hover img {
+  transform: none;
 }
 
 .licence-frame figcaption {

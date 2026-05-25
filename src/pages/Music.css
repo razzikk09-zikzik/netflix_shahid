@@ -7,9 +7,10 @@
 
 .music-hero {
   position: relative;
-  min-height: 340px;
-  background-size: cover;
-  background-position: center;
+  min-height: 380px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
   display: flex;
   align-items: flex-end;
 }
@@ -33,12 +34,15 @@
 }
 
 .music-hero-cover {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+  object-position: center;
+  background: #0d0d0d;
   border-radius: 8px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
   border: 2px solid rgba(229, 9, 20, 0.5);
+  flex-shrink: 0;
 }
 
 .music-eyebrow {
@@ -125,7 +129,8 @@
   width: 48px;
   height: 48px;
   border-radius: 6px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #0d0d0d;
   flex-shrink: 0;
 }
 

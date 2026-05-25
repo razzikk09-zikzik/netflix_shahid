@@ -28,9 +28,13 @@ const Licence: React.FC = () => {
         <h2>Licence &amp; Venture Documentation</h2>
         <div className="licence-gallery">
           {images.map((img, index) => (
-            <figure key={img.caption} className="licence-frame" style={{ animationDelay: `${index * 0.1}s` }}>
-              <img src={img.src} alt={img.caption} />
-              <figcaption>{img.caption}</figcaption>
+            <figure
+              key={`${img.caption}-${index}`}
+              className={`licence-frame ${img.isProfilePhoto ? 'licence-frame-profile' : ''}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <img src={img.src} alt={img.caption || 'S. Mohamed Shahid'} />
+              {img.caption ? <figcaption>{img.caption}</figcaption> : null}
             </figure>
           ))}
         </div>
