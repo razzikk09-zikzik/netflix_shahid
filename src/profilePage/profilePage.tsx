@@ -27,8 +27,10 @@ const ProfilePage: React.FC = () => {
       >
         <ProfileBanner profile={profile} />
       </div>
-      <TopPicksRow profile={profile} />
-      <ContinueWatching profile={profile} />
+      <div className="profile-page-sections">
+        <TopPicksRow profile={profile} />
+        <ContinueWatching profile={profile} />
+      </div>
     </>
   );
 };

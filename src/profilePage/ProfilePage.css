@@ -7,6 +7,11 @@
   background-position: center;
 }
 
+.profile-page-sections {
+  background: #141414;
+  overflow: hidden;
+}
+
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;

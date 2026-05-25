@@ -1,111 +1,95 @@
+/* Netflix-style horizontal row — scoped classes only */
 .top-picks-row {
-  margin: 28px 0 36px;
-  padding: 0 3vw 8px;
+  margin: 20px 0 28px;
+  padding: 10px 3vw 16px;
+  background: #141414;
 }
 
-.row-title {
-  font-size: 1.35rem;
+.top-picks-row__title {
+  font-size: 1.4rem;
   font-weight: 600;
   color: #e5e5e5;
-  margin: 0 0 14px 6px;
-  animation: fadeIn 0.6s ease-out;
+  margin: 0 0 14px 4px;
 }
 
-.card-row {
+.top-picks-row__scroll {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
-  gap: 12px;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 15px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 6px 6px 18px;
-  scroll-snap-type: x proximity;
+  padding-bottom: 12px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 
-.card-row::-webkit-scrollbar {
+.top-picks-row__scroll::-webkit-scrollbar {
   display: none;
 }
 
-.pick-card {
+.top-picks-row__tile {
   position: relative;
   flex: 0 0 auto;
-  width: 240px;
-  aspect-ratio: 16 / 10;
-  min-height: 150px;
-  border-radius: 6px;
+  width: 250px;
+  height: 200px;
+  border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  scroll-snap-align: start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: topPicksSlideIn 0.5s ease forwards;
   opacity: 0;
-  animation: tileSlideIn 0.5s ease forwards;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
 }
 
-.pick-card:hover {
-  transform: scale(1.06);
+.top-picks-row__tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.5);
   z-index: 2;
-  box-shadow: 0 12px 28px rgba(229, 9, 20, 0.4);
 }
 
-.pick-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.top-picks-row__img {
   display: block;
-  transition: transform 0.3s ease;
+  width: 250px;
+  height: 200px;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
 }
 
-.pick-card:hover .pick-image {
-  transform: scale(1.04);
-}
-
-.overlay {
+.top-picks-row__overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.75) 0%,
-    rgba(0, 0, 0, 0.2) 45%,
-    transparent 100%
-  );
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 14px;
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.3s ease;
 }
 
-.pick-card:hover .overlay {
+.top-picks-row__tile:hover .top-picks-row__overlay {
   opacity: 1;
 }
 
-.pick-label {
+.top-picks-row__label {
   color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-  letter-spacing: 0.02em;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 0 8px;
 }
 
-@keyframes fadeIn {
+@keyframes topPicksSlideIn {
   from {
     opacity: 0;
-    transform: translateY(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes tileSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-12px);
+    transform: translateX(-16px);
   }
   to {
     opacity: 1;
@@ -115,27 +99,12 @@
 
 @media (max-width: 768px) {
   .top-picks-row {
-    padding: 0 16px 8px;
+    padding: 10px 16px 16px;
   }
 
-  .pick-card {
+  .top-picks-row__tile,
+  .top-picks-row__img {
     width: 200px;
-    min-height: 125px;
-  }
-
-  .row-title {
-    font-size: 1.2rem;
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 1400px) {
-  .pick-card {
-    width: 260px;
-    min-height: 162px;
-  }
-
-  .card-row {
-    gap: 14px;
+    height: 160px;
   }
 }

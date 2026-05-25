@@ -1,86 +1,74 @@
 .continue-watching-row {
-  padding: 0 3vw 32px;
-  color: #fff;
+  padding: 10px 3vw 32px;
+  background: #141414;
 }
 
-.continue-watching-row .row-title {
-  font-size: 1.35rem;
+.continue-watching-row__title {
+  font-size: 1.4rem;
   font-weight: 600;
   color: #e5e5e5;
-  margin: 0 0 14px 6px;
+  margin: 0 0 14px 4px;
 }
 
-.continue-watching-row .card-row {
+.continue-watching-row__scroll {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  flex-wrap: nowrap;
+  gap: 15px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 6px 6px 18px;
-  scroll-snap-type: x proximity;
-  -webkit-overflow-scrolling: touch;
+  padding-bottom: 12px;
   scrollbar-width: none;
 }
 
-.continue-watching-row .card-row::-webkit-scrollbar {
+.continue-watching-row__scroll::-webkit-scrollbar {
   display: none;
 }
 
-.continue-watching-row .pick-card {
+.continue-watching-row__tile {
   position: relative;
   flex: 0 0 auto;
-  width: 240px;
-  aspect-ratio: 16 / 10;
-  min-height: 150px;
-  border-radius: 6px;
+  width: 250px;
+  height: 200px;
+  border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  scroll-snap-align: start;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.continue-watching-row .pick-card:hover {
-  transform: scale(1.06);
-  box-shadow: 0 12px 28px rgba(229, 9, 20, 0.4);
+.continue-watching-row__tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.5);
 }
 
-.continue-watching-row .pick-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.continue-watching-row__img {
   display: block;
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
 }
 
-.continue-watching-row .overlay {
+.continue-watching-row__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.75) 0%,
-    rgba(0, 0, 0, 0.2) 45%,
-    transparent 100%
-  );
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 14px;
-  opacity: 1;
 }
 
-.continue-watching-row .pick-label {
+.continue-watching-row__label {
   color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 768px) {
-  .continue-watching-row {
-    padding: 0 16px 24px;
-  }
-
-  .continue-watching-row .pick-card {
+  .continue-watching-row__tile,
+  .continue-watching-row__img {
     width: 200px;
-    min-height: 125px;
+    height: 160px;
   }
 }

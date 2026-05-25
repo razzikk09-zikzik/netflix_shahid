@@ -1,76 +1,91 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TopPicksRow.css';
-import { FaPassport, FaCode, FaBriefcase, FaCertificate, FaHandsHelping, FaProjectDiagram, FaEnvelope, FaMusic, FaBook, FaIdCard, FaFileContract } from 'react-icons/fa';
+import blueImage from '../images/blue.png';
+import greyImage from '../images/grey.png';
+import redImage from '../images/red.png';
 import internshipThumb from '../images/internship.jpg';
 import licenceThumb from '../images/licence.jpg';
+import chickenImg from '../images/chicken.jpg';
+import chinnarasuImg from '../images/chinnarasu.png';
+import msmeImg from '../images/msme.png';
+import gtaImg from '../images/gta.jpg';
+import shapicImg from '../images/shapic.png';
 
 type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventure';
+
+interface TopPick {
+  title: string;
+  imgSrc: string;
+  route: string;
+}
 
 interface TopPicksRowProps {
   profile: ProfileType;
 }
 
-const topPicksConfig = {
+const topPicksConfig: Record<ProfileType, TopPick[]> = {
   recruiter: [
-    { title: "Availability", imgSrc: "https://picsum.photos/seed/availability/250/200", icon: <FaPassport />, route: "/work-permit" },
-    { title: "Skills", imgSrc: "https://picsum.photos/seed/skills/250/200", icon: <FaCode />, route: "/skills" },
-    { title: "Experience", imgSrc: "https://picsum.photos/seed/workexperience/250/200", icon: <FaBriefcase />, route: "/work-experience" },
-    { title: "Internship", imgSrc: internshipThumb, icon: <FaIdCard />, route: "/internship" },
-    { title: "Licence", imgSrc: licenceThumb, icon: <FaFileContract />, route: "/licence" },
-    { title: "Certifications", imgSrc: "https://picsum.photos/seed/certifications/250/200", icon: <FaCertificate />, route: "/certifications" },
-    { title: "Recommendations", imgSrc: "https://picsum.photos/seed/recommendations/250/200", icon: <FaHandsHelping />, route: "/recommendations" },
-    { title: "Projects", imgSrc: "https://picsum.photos/seed/projects/250/200", icon: <FaProjectDiagram />, route: "/projects" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/seed/contact/250/200", icon: <FaEnvelope />, route: "/contact-me" }
+    { title: 'Availability', imgSrc: blueImage, route: '/work-permit' },
+    { title: 'Skills', imgSrc: greyImage, route: '/skills' },
+    { title: 'Experience', imgSrc: redImage, route: '/work-experience' },
+    { title: 'Internship', imgSrc: internshipThumb, route: '/internship' },
+    { title: 'Licence', imgSrc: licenceThumb, route: '/licence' },
+    { title: 'Certifications', imgSrc: msmeImg, route: '/certifications' },
+    { title: 'Recommendations', imgSrc: shapicImg, route: '/recommendations' },
+    { title: 'Projects', imgSrc: chickenImg, route: '/projects' },
+    { title: 'Contact Me', imgSrc: blueImage, route: '/contact-me' },
   ],
   developer: [
-    { title: "Skills", imgSrc: "https://picsum.photos/seed/coding/250/200", route: "/skills", icon: <FaCode /> },
-    { title: "Projects", imgSrc: "https://picsum.photos/seed/development/250/200", route: "/projects", icon: <FaProjectDiagram /> },
-    { title: "Certifications", imgSrc: "https://picsum.photos/seed/badge/250/200", route: "/certifications", icon: <FaCertificate /> },
-    { title: "Experience", imgSrc: "https://picsum.photos/seed/work/250/200", route: "/work-experience", icon: <FaBriefcase /> },
-    { title: "Recommendations", imgSrc: "https://picsum.photos/seed/networking/250/200", route: "/recommendations", icon: <FaHandsHelping /> },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/seed/connect/250/200", route: "/contact-me", icon: <FaEnvelope /> }
+    { title: 'Skills', imgSrc: greyImage, route: '/skills' },
+    { title: 'Projects', imgSrc: chinnarasuImg, route: '/projects' },
+    { title: 'Certifications', imgSrc: msmeImg, route: '/certifications' },
+    { title: 'Experience', imgSrc: redImage, route: '/work-experience' },
+    { title: 'Internship', imgSrc: internshipThumb, route: '/internship' },
+    { title: 'Contact Me', imgSrc: shapicImg, route: '/contact-me' },
   ],
   stalker: [
-    { title: "Recommendations", imgSrc: "https://picsum.photos/seed/networking/250/200", route: "/recommendations", icon: <FaHandsHelping /> },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/seed/call/250/200", route: "/contact-me", icon: <FaEnvelope /> },
-    { title: "Projects", imgSrc: "https://picsum.photos/seed/planning/250/200", route: "/projects", icon: <FaProjectDiagram /> },
-    { title: "Experience", imgSrc: "https://picsum.photos/seed/resume/250/200", route: "/work-experience", icon: <FaBriefcase /> },
-    { title: "Certifications", imgSrc: "https://picsum.photos/seed/achievements/250/200", route: "/certifications", icon: <FaCertificate /> },
+    { title: 'Recommendations', imgSrc: shapicImg, route: '/recommendations' },
+    { title: 'Contact Me', imgSrc: blueImage, route: '/contact-me' },
+    { title: 'Projects', imgSrc: chinnarasuImg, route: '/projects' },
+    { title: 'Experience', imgSrc: greyImage, route: '/work-experience' },
+    { title: 'Certifications', imgSrc: msmeImg, route: '/certifications' },
   ],
   adventure: [
-    { title: "Music", imgSrc: "https://picsum.photos/seed/music/250/200", route: "/music", icon: <FaMusic /> },
-    { title: "Projects", imgSrc: "https://picsum.photos/seed/innovation/250/200", route: "/projects", icon: <FaProjectDiagram /> },
-    { title: "Reading", imgSrc: "https://picsum.photos/seed/books/250/200", route: "/reading", icon: <FaBook /> },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/seed/connect/250/200", route: "/contact-me", icon: <FaEnvelope /> },
-    { title: "Certifications", imgSrc: "https://picsum.photos/seed/medal/250/200", route: "/certifications", icon: <FaCertificate /> }
-  ]
+    { title: 'Music', imgSrc: gtaImg, route: '/music' },
+    { title: 'Projects', imgSrc: chickenImg, route: '/projects' },
+    { title: 'Internship', imgSrc: internshipThumb, route: '/internship' },
+    { title: 'Contact Me', imgSrc: blueImage, route: '/contact-me' },
+    { title: 'Licence', imgSrc: licenceThumb, route: '/licence' },
+  ],
 };
-
 
 const TopPicksRow: React.FC<TopPicksRowProps> = ({ profile }) => {
   const navigate = useNavigate();
   const topPicks = topPicksConfig[profile];
 
   return (
-    <div className="top-picks-row">
-      <h2 className="row-title">Today's Top Picks for {profile}</h2>
-      <div className="card-row">
-      {topPicks.map((pick, index) => (
-          <div 
-            key={index} 
-            className="pick-card" 
+    <section className="top-picks-row">
+      <h2 className="top-picks-row__title">Today&apos;s Top Picks for {profile}</h2>
+      <div className="top-picks-row__scroll">
+        {topPicks.map((pick, index) => (
+          <div
+            key={pick.title}
+            className="top-picks-row__tile"
             onClick={() => navigate(pick.route)}
-            style={{ animationDelay: `${index * 0.2}s` }} // Adding delay based on index
+            style={{ animationDelay: `${index * 0.15}s` }}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === 'Enter' && navigate(pick.route)}
           >
-            <img src={pick.imgSrc} alt={pick.title} className="pick-image" />
-            <div className="overlay">
-              <div className="pick-label">{pick.title}</div>
+            <img src={pick.imgSrc} alt={pick.title} className="top-picks-row__img" loading="lazy" />
+            <div className="top-picks-row__overlay">
+              <span className="top-picks-row__label">{pick.title}</span>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
