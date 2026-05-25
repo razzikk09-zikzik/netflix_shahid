@@ -4,7 +4,7 @@ import './TopPicksRow.css';
 import internshipThumb from '../images/internship.jpg';
 import licenceThumb from '../images/licence.jpg';
 
-type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventure';
+type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventurer';
 
 interface TopPick {
   title: string;
@@ -43,7 +43,7 @@ const topPicksConfig: Record<ProfileType, TopPick[]> = {
     { title: 'Experience', imgSrc: 'https://picsum.photos/seed/resume/250/200', route: '/work-experience' },
     { title: 'Certifications', imgSrc: 'https://picsum.photos/seed/achievements/250/200', route: '/certifications' },
   ],
-  adventure: [
+  adventurer: [
     { title: 'Music', imgSrc: 'https://picsum.photos/seed/music/250/200', route: '/music' },
     { title: 'Projects', imgSrc: 'https://picsum.photos/seed/innovation/250/200', route: '/projects' },
     { title: 'Reading', imgSrc: 'https://picsum.photos/seed/books/250/200', route: '/reading' },

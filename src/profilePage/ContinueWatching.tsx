@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ContinueWatching.css';
 
-type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventure';
+type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventurer';
 
 interface ContinueWatchingProps {
   profile: ProfileType;
@@ -28,7 +28,7 @@ const continueWatchingConfig: Record<
     { title: 'Blogs', imgSrc: 'https://picsum.photos/id/1027/250/200', link: '/blogs' },
     { title: 'Contact Me', imgSrc: 'https://picsum.photos/id/1029/250/200', link: '/contact-me' },
   ],
-  adventure: [
+  adventurer: [
     { title: 'Music', imgSrc: 'https://picsum.photos/id/1025/250/200', link: '/music' },
     { title: 'Reading', imgSrc: 'https://picsum.photos/id/1026/250/200', link: '/reading' },
     { title: 'Certifications', imgSrc: 'https://picsum.photos/id/1028/250/200', link: '/certifications' },
