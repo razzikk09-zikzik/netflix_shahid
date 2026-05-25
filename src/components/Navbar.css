@@ -25,7 +25,10 @@
 }
 
 .navbar-logo img {
-  height: 30px;
+  height: 36px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
   margin-right: 30px;
   margin-left: 10px;
   margin-top: 5px;

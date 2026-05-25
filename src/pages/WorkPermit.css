@@ -50,6 +50,30 @@
   color: #e50914;
 }
 
+.work-permit-roles-label {
+  font-weight: 600;
+  margin-top: 16px;
+  color: #333;
+}
+
+.work-permit-roles {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.work-permit-roles li {
+  background: #e50914;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
 .additional-info {
   font-size: 1rem;
   color: #333;

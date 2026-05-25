@@ -1,13 +1,9 @@
-## 🌟 Sumanth Samala's Netflix inspired Portfolio 🌟 - https://sumanthsamala.com/
+## 🌟 S. Mohamed Shahid — Netflix-inspired Portfolio 🌟
 
-Welcome to my personal portfolio project! 🚀 This website showcases my work, skills, and experiences in web development. It's designed to be lightweight, customizable, and professional while maintaining an approachable style.
+Personal portfolio for **S. Mohamed Shahid** — Software Engineer & Full-Stack Developer (IoT, ML, full-stack web). Built on a Netflix-style UI forked from an open-source template.
 
-Explore specific subdomains tailored to different tech stacks:
-
-- 🌟 [java.sumanthsamala.com](https://java.sumanthsamala.com/) for Java Spring Boot-related work.
-- 🌟 [node.sumanthsamala.com](https://node.sumanthsamala.com/) for Node.js and backend development.
-- 🌟 [frontend.sumanthsamala.com](https://frontend.sumanthsamala.com/) for frontend development expertise.
-- 🌟 [ror.sumanthsamala.com](https://ror.sumanthsamala.com/) for Ruby on Rails projects.
+- 🔗 [LinkedIn](https://www.linkedin.com/in/mohamed-shahid-53562a309/)
+- 📄 [Resume (PDF)](https://drive.google.com/file/d/1_nxX5ui3DmKEyZ3ywYwMWdQmq24ezWNS/view?usp=sharing)
 
 ![Screenshot from 2024-12-08 19-19-06](https://github.com/user-attachments/assets/f8220485-16ec-48cf-8cb2-7853540c5724)
 
@@ -15,7 +11,7 @@ Explore specific subdomains tailored to different tech stacks:
 
 ## ✨ Features
 
-- 🌍 **Dynamic Content**: Powered by [DatoCMS](https://www.datocms.com) for easy content management.
+- 🌍 **Editable Content**: Profile banner and contact info are hardcoded; other sections can use [DatoCMS](https://www.datocms.com) optionally.
 - ⚡ **Fast & Responsive**: Built with modern web technologies for seamless performance.
 - 🎨 **Customizable**: Modular and easy to adapt to your own needs.
 - 📈 **Professional Yet Personal**: Highlights projects, skills, and achievements.
@@ -158,9 +154,9 @@ Your feedback is valuable and helps make this project better for everyone. Thank
 
 ## 📧 Contact Me
 
-- 💼 [Portfolio Website](https://sumanthsamala.com)
-- 📧 Email: [chintusamala96@gmail.com](mailto:chintusamala96@gmail.com)
-- 🔗 [LinkedIn](https://uk.linkedin.com/in/sumanth-samala-82431161)
+- 🔗 [LinkedIn — Mohamed Shahid](https://www.linkedin.com/in/mohamed-shahid-53562a309/)
+- 📄 [Resume (Google Drive)](https://drive.google.com/file/d/1_nxX5ui3DmKEyZ3ywYwMWdQmq24ezWNS/view?usp=sharing)
+- ✏️ Edit contact details in `src/data/contactMe.ts`
 
 ---
 

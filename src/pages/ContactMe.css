@@ -6,6 +6,12 @@
   animation: fadeIn 0.8s ease-in-out;
 }
 
+.contact-section-title {
+  color: #e50914;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
 .linkedin-badge-custom {
   display: flex;
   align-items: center;

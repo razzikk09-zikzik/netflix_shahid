@@ -38,6 +38,20 @@
   margin-bottom: 10px;
 }
 
+.banner-tagline {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #e5e5e5;
+  font-weight: 600;
+}
+
+.banner-footer-line {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #b3b3b3;
+  font-style: italic;
+}
+
 .banner-description {
   font-size: 1rem;
   margin-bottom: 20px;

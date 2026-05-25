@@ -1,40 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './ProfileBanner.css';
 import PlayButton from '../components/PlayButton';
 import MoreInfoButton from '../components/MoreInfoButton';
-import { getProfileBanner } from '../queries/getProfileBanner';
-import { ProfileBanner as ProfileBannerType } from '../types';
+import { profileBannerContent, ProfileType } from '../data/profileContent';
 
-const ProfileBanner: React.FC = () => {
+interface ProfileBannerProps {
+  profile: ProfileType;
+}
 
-
-  const [bannerData, setBannerData] = useState<ProfileBannerType | null>(null);
-
-  useEffect(() => {
-    async function fetchData() {
-      const data = await getProfileBanner();
-      setBannerData(data);
-    }
-    fetchData();
-  }, []);
-
-  if (!bannerData) return <div>Loading...</div>;
+const ProfileBanner: React.FC<ProfileBannerProps> = ({ profile }) => {
+  const bannerData = profileBannerContent[profile];
 
   const handlePlayClick = () => {
-    window.open(bannerData.resumeLink.url, '_blank');
+    window.open(bannerData.resumeLink, '_blank', 'noopener,noreferrer');
   };
 
-  const handleLinkedinClick = () => { 
-    window.open(bannerData.linkedinLink, '_blank');
-  }
+  const handleLinkedinClick = () => {
+    window.open(bannerData.linkedinLink, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="profile-banner">
       <div className="banner-content">
-        <h1 className="banner-headline" id='headline'>{bannerData.headline}</h1>
-        <p className="banner-description">
-          {bannerData.profileSummary}
-        </p>
+        <h1 className="banner-headline" id="headline">
+          {bannerData.headline}
+        </h1>
+        <p className="banner-tagline">{bannerData.tagline}</p>
+        <p className="banner-description">{bannerData.profileSummary}</p>
+        <p className="banner-footer-line">{bannerData.footerLine}</p>
 
         <div className="banner-buttons">
           <PlayButton onClick={handlePlayClick} label="Resume" />

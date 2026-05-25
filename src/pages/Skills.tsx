@@ -1,66 +1,79 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Skills.css';
-import { getSkills } from '../queries/getSkills';
+import { technicalSkills } from '../data/skills';
+import {
+  FaAws,
+  FaMicrochip,
+  FaCode,
+  FaLayerGroup,
+  FaMobileAlt,
+  FaServer,
+  FaClock,
+  FaSatelliteDish,
+  FaEye,
+  FaChartLine,
+} from 'react-icons/fa';
+import {
+  SiPython,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiMicropython,
+  SiNumpy,
+  SiPandas,
+  SiScikitlearn,
+  SiTensorflow,
+  SiOpencv,
+  SiGit,
+  SiJupyter,
+} from 'react-icons/si';
 
-import { FaReact, FaNodeJs, FaAws, FaDocker, FaJava } from 'react-icons/fa';
-import { SiRubyonrails, SiTypescript, SiPostgresql, SiMysql, SiKubernetes, SiGooglecloud, SiSpringboot, SiPhp, SiNetlify, SiHeroku, SiRabbitmq, SiImessage } from 'react-icons/si';
-import { Skill } from '../types';
-
-const iconMap: { [key: string]: JSX.Element } = {
-  SiRubyonrails: <SiRubyonrails />,
-  FaNodeJs: <FaNodeJs />,
-  SiSpringboot: <SiSpringboot />,
-  FaJava: <FaJava />,
-  SiPhp: <SiPhp />,
-  FaReact: <FaReact />,
-  SiTypescript: <SiTypescript />,
+const iconMap: Record<string, JSX.Element> = {
+  SiPython: <SiPython />,
+  SiJavascript: <SiJavascript />,
+  SiHtml5: <SiHtml5 />,
+  SiCss3: <SiCss3 />,
+  SiMicropython: <SiMicropython />,
+  SiNumpy: <SiNumpy />,
+  SiPandas: <SiPandas />,
+  SiScikitlearn: <SiScikitlearn />,
+  SiTensorflow: <SiTensorflow />,
+  SiOpencv: <SiOpencv />,
+  SiGit: <SiGit />,
+  SiJupyter: <SiJupyter />,
+  FaChartLine: <FaChartLine />,
   FaAws: <FaAws />,
-  FaDocker: <FaDocker />,
-  SiPostgresql: <SiPostgresql />,
-  SiMysql: <SiMysql />,
-  SiKubernetes: <SiKubernetes />,
-  SiGooglecloud: <SiGooglecloud />,
-  SiHeroku: <SiHeroku />,
-  SiNetlify: <SiNetlify />,
-  SiRabbitmq: <SiRabbitmq />,
-  SiImessage: <SiImessage />,
+  FaMicrochip: <FaMicrochip />,
+  FaLayerGroup: <FaLayerGroup />,
+  FaMobileAlt: <FaMobileAlt />,
+  FaServer: <FaServer />,
+  FaClock: <FaClock />,
+  FaSatelliteDish: <FaSatelliteDish />,
+  FaEye: <FaEye />,
 };
 
-
 const Skills: React.FC = () => {
-
-  const [skillsData, setSkillsData] = useState<Skill[]>([]);
-
-  useEffect(() => {
-    async function fetchSkills() {
-      const data = await getSkills();
-      setSkillsData(data);
-    }
-
-    fetchSkills()
-  }, []);
-
-  if (skillsData.length === 0) return <div>Loading...</div>;
-
-  const skillsByCategory = skillsData.reduce((acc: any, skill: any) => {
-    if (!acc[skill.category]) acc[skill.category] = [];
-    acc[skill.category].push(skill);
-    return acc;
-  }, {});
-
-
   return (
     <div className="skills-container">
-      {Object.keys(skillsByCategory).map((category, index) => (
-        <div key={index} className="skill-category">
-          <h3 className="category-title">{category}</h3>
+      <h1 className="skills-page-title">Technical Skills</h1>
+      <p className="skills-page-subtitle">
+        Languages, frameworks, embedded systems, and platforms I work with
+      </p>
+
+      {technicalSkills.map((group, index) => (
+        <div key={group.category} className="skill-category" style={{ animationDelay: `${index * 0.1}s` }}>
+          <h2 className="category-title">{group.category}</h2>
           <div className="skills-grid">
-            {skillsByCategory[category].map((skill: any, idx: number) => (
-              <div key={idx} className="skill-card">
-                <div className="icon">{iconMap[skill.icon] || <FaReact />}</div>
+            {group.skills.map((skill, idx) => (
+              <div key={`${group.category}-${skill.name}`} className="skill-card">
+                <div className="icon">{iconMap[skill.iconKey] ?? <FaCode />}</div>
                 <h3 className="skill-name">
-                  {skill.name.split('').map((letter: any, i: number) => (
-                    <span key={i} className="letter" style={{ animationDelay: `${i * 0.05}s` }}>
+                  {skill.name.split('').map((letter, i) => (
+                    <span
+                      key={`${skill.name}-${i}`}
+                      className="letter"
+                      style={{ animationDelay: `${i * 0.04}s` }}
+                    >
                       {letter}
                     </span>
                   ))}
