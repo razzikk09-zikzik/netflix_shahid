@@ -69,6 +69,13 @@
 .skill-name {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.word-group {
+  display: inline-flex;
+  white-space: nowrap;
 }
 
 .letter {

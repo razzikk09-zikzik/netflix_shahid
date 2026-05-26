@@ -68,13 +68,17 @@ const Skills: React.FC = () => {
               <div key={`${group.category}-${skill.name}`} className="skill-card">
                 <div className="icon">{iconMap[skill.iconKey] ?? <FaCode />}</div>
                 <h3 className="skill-name">
-                  {skill.name.split('').map((letter, i) => (
-                    <span
-                      key={`${skill.name}-${i}`}
-                      className="letter"
-                      style={{ animationDelay: `${i * 0.04}s` }}
-                    >
-                      {letter}
+                  {skill.name.split(' ').map((word, wordIndex) => (
+                    <span key={`${skill.name}-word-${wordIndex}`} className="word-group">
+                      {word.split('').map((letter, i) => (
+                        <span
+                          key={`${skill.name}-letter-${wordIndex}-${i}`}
+                          className="letter"
+                          style={{ animationDelay: `${(wordIndex * 5 + i) * 0.04}s` }}
+                        >
+                          {letter}
+                        </span>
+                      ))}
                     </span>
                   ))}
                 </h3>
