@@ -10,15 +10,6 @@ const Internship: React.FC = () => {
         <p>Industry training across full-stack development, embedded systems, and automotive R&amp;D</p>
       </header>
 
-      <section className="internship-spotlight">
-        <img src={internships[0].image} alt="PanTech eLearning MSME" className="spotlight-image" />
-        <div className="spotlight-body">
-          <span className="spotlight-badge">PanTech eLearning Pvt. Ltd. · 2024</span>
-          <h2>Python Full Stack Development Intern</h2>
-          <p>{internships[0].highlights[0]}</p>
-        </div>
-      </section>
-
       <section className="internship-gallery">
         {internshipGallery.map((src, index) => (
           <figure key={src} className="gallery-frame" style={{ animationDelay: `${index * 0.15}s` }}>

@@ -15,7 +15,7 @@ export interface InternshipEntry {
   image: string;
 }
 
-export const internshipGallery = [internshipMain, internshipAlt, rangeImg, msmeImg, embeddedImg, welcordImg];
+export const internshipGallery = [internshipMain, internshipAlt, rangeImg, msmeImg];
 
 export const internships: InternshipEntry[] = [
   {
