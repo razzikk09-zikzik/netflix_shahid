@@ -2,6 +2,8 @@ import internshipMain from '../images/internship.jpg';
 import internshipAlt from '../images/internship1.jpg';
 import rangeImg from '../images/range.png';
 import msmeImg from '../images/msme.png';
+import embeddedImg from '../images/8051.jpeg';
+import welcordImg from '../images/welcord.png';
 
 export interface InternshipEntry {
   id: string;
@@ -13,14 +15,14 @@ export interface InternshipEntry {
   image: string;
 }
 
-export const internshipGallery = [internshipMain, internshipAlt, rangeImg, msmeImg];
+export const internshipGallery = [internshipMain, internshipAlt, rangeImg, msmeImg, embeddedImg, welcordImg];
 
 export const internships: InternshipEntry[] = [
   {
     id: 'pantech',
     role: 'Python Full Stack Development Intern',
     company: 'PanTech eLearning Pvt. Ltd.',
-    period: '2024',
+    period: '2025',
     techStack: 'Python, HTML, CSS, JavaScript, REST APIs, React, Node.js, MySQL',
     highlights: [
       'Completed a Python Full Stack Development internship at PanTech eLearning Pvt. Ltd., gaining hands-on experience in frontend, backend, and web application development.',
@@ -29,6 +31,17 @@ export const internships: InternshipEntry[] = [
       'Delivered a capstone e-commerce module as the final project.',
     ],
     image: msmeImg,
+  },
+  {
+    id: 'welcord',
+    role: 'Intern',
+    company: 'Welcord',
+    period: '2024',
+    techStack: 'Professional Experience',
+    highlights: [
+      'Contributed to professional and technical projects.',
+    ],
+    image: welcordImg,
   },
   {
     id: 'rtech',
@@ -41,18 +54,18 @@ export const internships: InternshipEntry[] = [
       'Debugged hardware faults using oscilloscope and logic analyser.',
       'Reduced board fault rate by 20%.',
     ],
-    image: internshipAlt,
+    image: embeddedImg,
   },
   {
     id: 'rane',
     role: 'R&D Intern',
     company: 'Rane Power Steering Systems Pvt. Ltd.',
-    period: '2022',
+    period: '2025',
     techStack: 'ECU Testing, Documentation, Quality Analysis',
     highlights: [
       'Tested and documented power steering ECU behaviour under simulated load.',
       'Compiled structured reports for component qualification decisions.',
     ],
-    image: rangeImg,
+    image: internshipAlt,
   },
 ];

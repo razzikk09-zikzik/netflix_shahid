@@ -3,7 +3,7 @@ import { TimelineItem } from '../types';
 export const timelineData: TimelineItem[] = [
   {
     timelineType: 'work',
-    dateRange: '2024',
+    dateRange: '2025',
     title: 'Full-Stack Development Intern 🚀',
     name: 'PanTech eLearning',
     techStack: 'HTML, CSS, JavaScript, REST APIs, React, Node.js, MySQL',
@@ -12,6 +12,16 @@ export const timelineData: TimelineItem[] = [
       'Integrated backend REST APIs and reduced average page load time by 25% through optimization and lazy loading.',
       'Completed a structured 3-month curriculum covering React, Node.js/Express, and MySQL.',
       'Delivered a capstone e-commerce module as the final project.',
+    ],
+  },
+  {
+    timelineType: 'work',
+    dateRange: '2024',
+    title: 'Professional Intern 💼',
+    name: 'Welcord',
+    techStack: 'Professional Experience',
+    summaryPoints: [
+      'Contributed to professional and technical projects at Welcord.',
     ],
   },
   {
@@ -60,7 +70,7 @@ export const timelineData: TimelineItem[] = [
   },
   {
     timelineType: 'work',
-    dateRange: '2022',
+    dateRange: '2025',
     title: 'R&D Intern ⚙️',
     name: 'Rane Power Steering Systems Pvt. Ltd.',
     techStack: 'ECU Testing, Documentation, Quality Analysis',
